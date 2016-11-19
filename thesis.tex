@@ -7,7 +7,7 @@
 %
 % Released under an MIT license. Share, modify and enjoy, but quote the author!
 
-\documentclass[10pt, a4paper]{book}
+\documentclass[10pt, a4paper, oneside]{book}
 
 % Define the packages.
 % Packages are mostly based on the NIPS (Neural Information Processing Systems) requirements.
@@ -30,7 +30,7 @@
 
 % Define page structure using Geometry.
 % For printing, set right to 35mm
-\geometry{a4paper, portrait, left=20mm, right=20mm, top=35mm, bottom=30mm}
+\geometry{a4paper, portrait, left=35mm, right=20mm, top=35mm, bottom=30mm}
 
 % Define the core properties of your thesis.
 \title{Superfancy title goes here}                                    % Title of the thesis
@@ -47,7 +47,18 @@
 
 \begin{document}
 
-% Include the cover page.
+
+\frontmatter
+\let\cleardoublepage\clearpage
 \input{head/cover_page}
+%\input{head/dedication}
+\input{head/acknowledgements}
+\input{head/abstract}
+\input{head/summary}
+\tableofcontents
+
+\mainmatter
+\input{body/introduction}
+\input{body/chapter_1}
 
 \end{document}
