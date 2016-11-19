@@ -16,3 +16,4 @@ mv thesis.aux output
 mv thesis.log output
 mv thesis.pdf output
 mv thesis.out output
+mv thesis.toc output
