@@ -1,129 +1,39 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maastricht University Thesis Template
 %
-%	MSc THESIS TEMPLATE
-%	developed for my master thesis at the Universitá di Torino
+% Developed for my Master Thesis at Maastricht University.
+% Based on Eugenio Senes's template at the University of Torino.
 %
-%	by Eugenio Senes (eugenio.senes@gmail.com)
+% By Joeri Hermans (joeri@joerihermans.com)
 %
-%	released under MIT license, so share, modify and enjoy, but quoting the author !
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Released under an MIT license. Share, modify and enjoy, but quote the author!
 
-%% DOCUMENT CLASS (alternative to book is 'report')
-% Print just right page or both sides (comment the other one)
-\documentclass[12pt,a4paper,openright,oneside]{book}  %%One sided
+\documentclass[10pt, a4paper]{book}
 
-%% SET MARGINS OF THE PAGES
-\usepackage{geometry}
-\geometry{a4paper,portrait, left=35mm, right=20mm, top=35mm, bottom=30mm}
+% Define the packages.
+% Packages are mostly based on the NIPS (Neural Information Processing Systems) requirements.
+\usepackage[T1]{fontenc}    % Use 8-bit T1 fonts
+\usepackage[english]{babel} % Set English as main language
+\usepackage[utf8]{inputenc} % Allow utf-8 input
+\usepackage{amsfonts}       % Blackboard math symbols
+\usepackage{amsmath}        % AMS Math
+\usepackage{amssymb}        % AMS Symbols
+\usepackage{booktabs}       % Professional-quality tables
+\usepackage{caption}        % Captions
+\usepackage{float}          % Float control
+\usepackage{geometry}       % Easily define margins
+\usepackage{graphicx}       % Graphic materials (e.g., images)
+\usepackage{hyperref}       % Hyperlinks
+\usepackage{microtype}      % Microtypography
+\usepackage{nicefrac}       % Compact symbols for 1/2, etc.
+\usepackage{rotating}       % Allow page rotation (e.g., for large table)
+\usepackage{tikz}           % Drawings
+\usepackage{url}            % Simple URL typesetting
 
-%% HEADERS AND FOOTERS
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{} %clears default header and footer
-\rhead{} %right head
-\lhead{ \leftmark} %left head
-\rfoot{\thepage}
-%%consider using also chead, cfoot, lfoot
-%coherce the plain stile to this (e.g. the first page of every chapter)
-\fancypagestyle{plain}{
-	\fancyhf{}
-	\rfoot{\thepage}
-	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
-}
-%% CLEAR PAGE WITHOUT NUMBER AT THE BEGINNING OF CHAPTERS
-\let\origdoublepage\cleardoublepage
-\newcommand{\clearemptydoublepage}{%
-  \clearpage
-  {\pagestyle{empty}\origdoublepage}%
-}
-%% ALLOW PAGE ROTATION
-\usepackage{rotating}
+% Define page structure using Geometry.
+\geometry{a4paper, portrait, left=35mm, right=20mm, top=35mm, bottom=30mm}
 
-%% HYPERTEXT SETUP
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
-}
-%% PDF SETTINGS
-\hypersetup
-{
-    pdfauthor={AuthorName},
-    pdftitle={shortTitle},
-    pdfsubject={subject},
-    pdfkeywords={keyword1, keyword2}
-}
-%% FONTS AND SYMBOLS
-\usepackage[utf8]{inputenc}	%%input font setting
-\usepackage[T1]{fontenc} 		%%font for automatic recognition of letters with the accent
-\usepackage{amsfonts}		%%fonts for the mathematical rendering of formulas
-\usepackage{amssymb}
-\usepackage{amsmath}
-%% CHAPTERS STRUCTURE
-\usepackage[italian,english]{babel} %%Set English as main language of the document
-%% FIGURES
-\usepackage{graphicx}
-%%CAPTIONS
-\usepackage{caption}
-%% BIBLIOGRAPHY
-\usepackage[babel]{csquotes}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% BEGIN DOCUMENT
 \begin{document}
 
-%%%% HEAD  OF THE DOCUMENT
-\frontmatter
-%%FRONT PAGE
-\input{head/frontPage.tex}
-\clearemptydoublepage
-%%DEDICATION (the initial quote)
-\input{head/dedication}
-\clearemptydoublepage
-%%ABSTRACT
-\input{head/abstract}
-\input{head/abstractITA}
-\clearemptydoublepage
-%%INDEXES
-%summary
-\tableofcontents
-\clearemptydoublepage
-%%%% BODY OF THE DOCUMENT
-\mainmatter
-%%INTRODUCTION
-\input{body/introduction.tex}
-\clearemptydoublepage
-%% CHAPTERS
-% add any further chapter file here
-\input{body/chapter1.tex}
-\clearemptydoublepage
-\input{body/chapter2.tex}
-\clearemptydoublepage
-\input{body/chapter3.tex}
-\clearemptydoublepage
-\input{body/chapter4.tex}
-\clearemptydoublepage
-
-
-
-%%%% TAIL OF THE DOCUMENT
-\backmatter
-%list of figures
-\listoffigures
-\clearemptydoublepage
-%list of tables
-\listoftables
-\clearemptydoublepage
-%bibliography
-\addcontentsline{toc}{chapter}{Bibliography}
-\bibliography{bibliography/bibThesis}
-\bibliographystyle{ieeetr}
-\clearemptydoublepage
 
 
 \end{document}
