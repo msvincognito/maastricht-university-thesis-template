@@ -23,6 +23,6 @@ Each chapter is stored as a separate file and we strongly recommend that any fur
 
 ### How to make bibliography entries and cite them
 
-All bibliography should be stored in the **[bibliography/bibliography_thesis.bib](https://github.com/msvincognito/maastricht-university-thesis-template/tree/master/bibliography/bibliography_thesis.bib)** file (that already contains some sample bibliography entries).
+All bibliography should be stored in the **[bibliography/bibliography_thesis.bib](bibliography/bibliography_thesis.bib)** file (that already contains some sample bibliography entries).
 
 Guidelines for using the file (adding references in text) are available on the [Bibliography management with Bibtex website](https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex#Bibliography_management_with_Bibtex). A cheatsheet with types of entries available in Bibtex is available on [this website](http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php).
