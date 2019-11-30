@@ -22,7 +22,7 @@
 \usepackage{float}          % Float control
 \usepackage{geometry}       % Easily define margins
 \usepackage{graphicx}       % Graphic materials (e.g., images)
-\usepackage{hyperref}       % Hyperlinks
+\usepackage[hidelinks]{hyperref}       % Hyperlinks
 \usepackage{microtype}      % Microtypography
 \usepackage{rotating}       % Allow page rotation (e.g., for large table)
 \usepackage{tikz}           % Drawings
@@ -31,6 +31,13 @@
 % Define page structure using Geometry.
 % For printing, set right to 35mm
 \geometry{a4paper, portrait, left=35mm, right=20mm, top=35mm, bottom=30mm}
+
+%% CLEAR PAGE WITHOUT NUMBER AT THE BEGINNING OF CHAPTERS
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
 
 % Define the core properties of your thesis.
 \title{Superfancy title goes here}                                    % Title of the thesis
@@ -60,5 +67,18 @@
 \mainmatter
 \input{body/introduction}
 \input{body/chapter_1}
+
+%%%% TAIL OF THE DOCUMENT
+\backmatter
+%list of figures
+\listoffigures
+\clearemptydoublepage
+%list of tables
+\listoftables
+\clearemptydoublepage
+%bibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bibliography/bibliography_thesis.bib}
+\bibliographystyle{ieeetr}
 
 \end{document}
