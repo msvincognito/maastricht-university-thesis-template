@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # This script will compile the complete thesis and will remove all the uncessesary
 # files after the compilation process is done. It will place the resulting pdf
