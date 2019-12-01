@@ -10,10 +10,9 @@ rm -r output
 mkdir output
 # Compile the thesis and write the output files.
 pdflatex thesis.tex
+bibtex thesis
+pdflatex thesis.tex
 pdflatex thesis.tex
 # Move all files to the output directory.
-mv thesis.aux output
-mv thesis.log output
-mv thesis.pdf output
-mv thesis.out output
-mv thesis.toc output
+mv thesis.* output
+mv output/thesis.tex thesis.tex

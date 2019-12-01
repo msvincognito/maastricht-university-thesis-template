@@ -28,9 +28,16 @@
 \usepackage{tikz}           % Drawings
 \usepackage{url}            % Simple URL typesetting
 
+%% BIBLIOGRAPHY
+\usepackage[babel]{csquotes}
+%% CODE LISTINGS
+\usepackage{listings}		%%allow to use code listings
+
 % Define page structure using Geometry.
 % For printing, set right to 35mm
 \geometry{a4paper, portrait, left=35mm, right=20mm, top=35mm, bottom=30mm}
+
+\graphicspath{{resources/images/}}
 
 %% CLEAR PAGE WITHOUT NUMBER AT THE BEGINNING OF CHAPTERS
 \let\origdoublepage\cleardoublepage
@@ -48,6 +55,9 @@
 \def \universitycountry{The Netherlands}                              % University country
 \def \faculty{Faculty of Science and Engineering}                     % Faculty
 \def \department{Department of Data Science \& Knowledge Engineering} % Department name
+\def \universitylogo{logo_university.png}                             % University logo file
+\def \studylevel{Master}                                              % Level of study (Bachelor/Master)
+\def \studydegree{Artificial Intelligence}                            % Degree name (level of study autofilled)
 
 % Load the macros.
 \input{utils/macros.tex}
@@ -78,7 +88,7 @@
 \clearemptydoublepage
 %bibliography
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliography{bibliography/bibliography_thesis.bib}
-\bibliographystyle{ieeetr}
+\bibliography{bibliography/bibliography_thesis}
+\bibliographystyle{apalike}
 
 \end{document}
